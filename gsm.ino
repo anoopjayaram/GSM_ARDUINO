@@ -15,7 +15,7 @@ void loop() {
   if(digitalRead(8)==0)
   {
     Serial.println("Calling");
-    gsm.println("ATD9446107556;");
+    gsm.println("ATD9846XXXXXX;");// Give Mobile Number to call
     delay(5000);
     }
     else if(digitalRead(9)==0)
@@ -37,7 +37,7 @@ void loop() {
         Serial.println("Message Sending");
       gsm.println("AT+CMGF=1");
       delay(1000);
-      gsm.println("AT+CMGS=\"9446107556\"");
+      gsm.println("AT+CMGS=\"9846XXXXXX\"");//// Give Mobile Number to send message
       delay(1000);
       gsm.println("Hello from GSM");
       gsm.write(26);
